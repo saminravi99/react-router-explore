@@ -1,0 +1,11 @@
+.detail-container{
+    min-height: 90vh
+}
+
+.friend-detail{
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #f2f2f2;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}

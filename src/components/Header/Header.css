@@ -1,0 +1,42 @@
+.nav-bar{
+    background-color: rgb(96, 71, 236);
+    height: 72px;
+}
+
+.nav-items{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    margin : 0 10px;
+    font-weight: 700;
+}
+
+.nav-items:hover{
+    text-decoration: none;
+    color: rgb(132, 235, 15);
+    margin : 0 10px;
+}
+
+.search-btn{
+    background-color: rgb(22, 11, 83) !important;
+    color: rgb(255, 255, 255) !important;
+    border: none !important;
+    border-radius: 5px !important;
+    padding: 5px 10px !important;
+    margin: 0 15px !important;
+    transition: background-color 0.2s linear;
+
+}
+
+.search-btn:hover{
+    background-color: rgb(255, 255, 255) !important;
+    color: rgb(22, 11, 83) !important;
+    border: none !important;
+    border-radius: 5px !important;
+    padding: 5px 10px !important;
+    margin: 0 15px !important;
+}
+
+input{
+    width: 225px !important;
+    border-radius: 25px !important;
+}
