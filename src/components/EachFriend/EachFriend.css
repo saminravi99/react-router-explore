@@ -24,3 +24,14 @@
     padding: 5px 10px !important;
     margin: 0 15px !important;
 }
+
+.each-image-container{
+    height:200px;
+}
+
+.spinner-container{
+    height: 200px;
+}
+.each-spinner{
+    height:200px;
+}

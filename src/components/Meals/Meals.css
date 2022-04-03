@@ -6,7 +6,17 @@
     position: relative;
     font-family: 'Roboto', sans-serif;
 }
-.btn{
+/* .btn{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+} */
+
+.spinner{
+    height: 80vh;
+}
+
+.add-cart-btn{
     position: absolute;
     bottom: 0;
     right: 0;

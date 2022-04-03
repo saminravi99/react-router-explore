@@ -9,6 +9,7 @@ import NotFound from '../NotFound/NotFound';
 import FriendDetail from '../../FriendDetail/FriendDetail';
 import Countries from '../Countries/Countries';
 import Meals from '../Meals/Meals';
+import CountryDetail from '../CountryDetail/CountryDetail';
 
 function App() {
 
@@ -35,11 +36,17 @@ function App() {
   }
 
 
+  const [loading,  setLoading] = useState(false);
+
 
   useEffect(() => {
+    setLoading(true);
     fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${search}`)
      .then(response => response.json())
-     .then(data => setMeals(data.meals))
+     .then(data => {
+          setLoading(false);       
+          setMeals(data.meals)
+     })
   }
     , [ search ])
 
@@ -60,9 +67,12 @@ function App() {
       <Route path="/" element={<Home></Home>}></Route>
       <Route path="/friends" element={<Friends></Friends>}></Route>
       <Route path="/friends/:id" element={<FriendDetail></FriendDetail>}></Route>
-      <Route path="/countries" element={<Countries></Countries>}></Route>
+      <Route path="/countries" element={<Countries></Countries>}>
+        <Route path=":name" element={<CountryDetail></CountryDetail>}></Route>
+      </Route>
       <Route path="/meals" element={<Meals
         meals={meals}
+        loading={loading}
       ></Meals>}></Route>
       <Route path="/about" element={<AboutUs></AboutUs>}></Route>
       <Route path="*" element={<NotFound></NotFound>}></Route>
